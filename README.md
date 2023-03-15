@@ -1,2 +1,1 @@
-# coppeliasim-python
-CoppeliaSim Python tutorial.
+# CoppeliaSim Python tutorial.
