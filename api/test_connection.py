@@ -34,6 +34,9 @@ if clientID!=-1:
         print ('Number of objects in the scene: ',len(objs))
     else:
         print ('Remote API function call returned with error code: ',res)
+
+    time.sleep(2)
+    sim.simxFinish(clientID)
 else:
     print ('Failed connecting to remote API server')
 print ('Program ended')
