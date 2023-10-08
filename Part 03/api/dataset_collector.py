@@ -46,6 +46,7 @@ try:
         im.resize([resolution[0], resolution[1], 3])
 
         im = cv2.flip(im, 0)
+        im = cv2.rotate(im, cv2.ROTATE_90_COUNTERCLOCKWISE)
         im = cv2.resize(im, (512, 512))
         im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)
 
@@ -59,23 +60,23 @@ try:
         if (com == ord('q')):
             break
         elif (com == ord('w')):
-            lSpeed = 0.2
-            rSpeed = 0.2
+            lSpeed = 0.4
+            rSpeed = 0.4
             cv2.imwrite(f"../train_data/forward/fw_{fw_ct}.jpg", im)
             fw_ct += 1
         elif (com == ord('a')):
-            lSpeed = -0.1
-            rSpeed = 0.2
+            lSpeed = -0.2
+            rSpeed = 0.4
             cv2.imwrite(f"../train_data/left/le_{le_ct}.jpg", im)
             le_ct += 1
         elif (com == ord('d')):
-            lSpeed = 0.2
-            rSpeed = -0.1
+            lSpeed = 0.4
+            rSpeed = -0.2
             cv2.imwrite(f"../train_data/right/ri_{ri_ct}.jpg", im)
             ri_ct += 1
         elif (com == ord('s')):
-            lSpeed = -0.2
-            rSpeed = -0.2
+            lSpeed = -0.4
+            rSpeed = -0.4
         else:
             lSpeed = 0
             rSpeed = 0
