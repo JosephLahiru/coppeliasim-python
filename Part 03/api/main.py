@@ -34,7 +34,7 @@ returnCode, resolution, image = sim.simxGetVisionSensorImage(
 delay(1)
 
 
-model = load_model('res/Models/Ai_Car-0.9653284549713135.h5')
+model = load_model('../model_creation/models/model.h5')
 
 
 dict_file = open("res/Data/ai_car.pkl", "rb")
